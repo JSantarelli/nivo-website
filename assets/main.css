@@ -14,7 +14,9 @@
   --primaryLight: #0ABEBB;
   --primaryDark: #164E63;
   --secondary: #2DD4BF;
-  --neutral: #f8f8f8;
+  --neutralLight: #f8f8f8;
+  --neutral: #64748B;
+  --neutralDark: #334155;
   --warning: #F9B303;
   --success: #2DD4BF;
   --titleSize: 32px;
@@ -130,7 +132,6 @@ body {
 .hero__description {
   font-size: var(--descriptionSize);
   line-height: 1.6;
-  opacity: 0.9;
 }
 
 .btn__container {
@@ -145,6 +146,9 @@ body {
 }
 
 .btn__secondary, .btn__primary, .btn__secondary--outline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: var(--btnBackgorund);
   border: 2px solid var(--btnColor);
   color: var(--btnColor);
@@ -165,7 +169,7 @@ body {
 .btn__secondary--outline:hover {
   --btnColor: var(--primaryLight);
   transition: all 0.2s;
-  background-color: var(--neutral);
+  background-color: var(--neutralLight);
 }
 
 .contact-btn:hover {
@@ -196,14 +200,14 @@ body {
   background-color: rgba(255, 255, 255, 0.25);
 }
 
-.hero-note {
+.hero__note {
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--primaryDark);
-  gap: 0;
+  font-weight: 500;
   white-space: nowrap;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 8px;
   width: min-content;
   padding: 8px 16px;
@@ -211,7 +215,7 @@ body {
   width: 100%;
 }
 
-.hero-note::before {
+.hero__note::before {
   content: "ℹ";
   background: transparent;
   color: var(--secondary);
@@ -274,7 +278,7 @@ body {
 .section__description {
   font-size: var(--descriptionSize);
   align-self: center;
-  color: #64748b;
+  color: var(--neutral);
   width: 100%;
 }
 
@@ -572,20 +576,30 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: #0E7490;
+  background-color: var(--primary);
   border-radius: 50%;
+}
+.sidebar .sidebar__stepper .sidebar__step .step__bullet.active {
+  background-color: var(--primaryLight);
+  outline: 2px solid var(--primaryLight);
+  outline-offset: 4px;
 }
 .sidebar .sidebar__stepper .sidebar__step .step-content {
   display: flex;
   flex-direction: column;
 }
 .sidebar .sidebar__stepper .sidebar__step .step-content .step__prefix {
-  font-size: 9px;
-  color: #A8AABC;
+  font-size: 10px;
+  color: var(--neutral);
 }
 .sidebar .sidebar__stepper .sidebar__step .step-content .step__title {
   font-size: 16px;
-  color: #333333;
+  font-weight: 500;
+  color: var(--neutralDark);
+}
+.sidebar .sidebar__stepper .sidebar__step .step-content .step__description {
+  font-size: 12px;
+  color: var(--neutral);
 }
 
 .pagination-dots {
@@ -783,8 +797,8 @@ footer.container-flex .section__description {
 .social__links {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-bottom: 0;
+  gap: var(--containerGapRow);
+  margin-top: var(--containerGap);
 }
 
 .social-link {
@@ -817,27 +831,34 @@ footer.container-flex .section__description {
 }
 
 /* Disclaimer */
-.footer-bottom {
+.footer--disclaimer {
+  display: flex;
+  justify-content: space-between;
   background: var(--primaryLight);
-  padding: 20px 0;
+  padding: 16px var(--bodyPadding);
   color: var(--primaryDark);
-  text-align: center;
-  font-size: 0.9rem;
+  text-align: left;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  width: 100%;
+  gap: var(--containerGapRow);
 }
-
-.footer-bottom-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+.footer--disclaimer > p {
+  flex: 1;
 }
-
-.disclaimer {
-  color: #334155;
-  opacity: 0.8;
+.footer--disclaimer nav {
+  display: flex;
+  gap: var(--containerGapRow);
 }
-
-.disclaimer strong {
-  font-weight: 600;
+.footer--disclaimer a {
+  color: var(--neutral);
+}
+.footer--disclaimer a:hover {
+  color: var(--neutralDark);
+}
+.footer--disclaimer a:visited {
+  color: var(--primary);
 }
 
 /* Responsive Design */
@@ -887,7 +908,7 @@ footer.container-flex .section__description {
     --btnFontSize: 12px;
     font-size: var(--btnFontSize);
   }
-  .hero-note {
+  .hero__note {
     font-size: 12px;
   }
   .container-wrap {
@@ -929,8 +950,16 @@ footer.container-flex .section__description {
     --containerGap: 16px;
     gap: var(--containerGap);
   }
-  .footer-container {
-    padding: 0 15px;
+  .footer--disclaimer {
+    --bodyPadding: 24px;
+    font-size: 11px;
+    line-height: 14px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer--disclaimer > nav {
+    justify-content: center;
   }
   .footer-contact {
     padding: 60px 0 40px;
