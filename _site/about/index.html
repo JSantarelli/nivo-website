@@ -13,6 +13,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     <link rel="stylesheet" href="./assets/main.css" />
+    <link rel="stylesheet" href="./assets/icons.css" />
     <link rel="alternate" type="application/rss+xml" title=" - Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." href="/feed.xml" />
 
     
@@ -34,31 +35,66 @@
 
   <!-- Page Wrapper -->
   <div id="page-wrapper">
-      <!-- Navigation -->
+    <!-- Navigation -->
     <nav class="navbar">
-        <img src="./assets/img/nv_logo-h.png" alt="" width="160">
+        <img src="./assets/img/nv_logo-h.png" alt="Logo" width="160">
         <ul class="nav-menu">
             <li class="nav-item">
-                <a href="#" class="nav-link dropdown-arrow">El desafío</a>
+                <a href="#inicio" class="nav-link dropdown-arrow">Inicio</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link dropdown-arrow">Nuestra app</a>
+                <a href="#desafio" class="nav-link dropdown-arrow">El desafío</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link dropdown-arrow">Testimoniales</a>
+                <a href="#portabilidad" class="nav-link dropdown-arrow">Enfoque</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link dropdown-arrow">Planes</a>
+                <a href="#solucion" class="nav-link dropdown-arrow">Nuestra solución</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="btn__secondary--outline">Contacto</a>
+                <a href="#testimoniales" class="nav-link dropdown-arrow">Testimoniales</a>
+            </li>
+            <!-- <li class="nav-item">
+                <a href="#planes" class="nav-link dropdown-arrow">Planes</a>
+            </li> -->
+            <li class="nav-item">
+                <a href="#contacto" class="btn__secondary--outline">Contacto</a>
             </li>
         </ul>
-        <button class="menu-toggle">☰</button>
+        <button class="menu-toggle" id="menuToggle">☰</button>
     </nav>
 
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <div class="mobile-nav-panel">
+            <ul class="mobile-nav-menu">
+                <li class="nav-item">
+                    <a href="#inicio" class="nav-link dropdown-arrow">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#desafio" class="nav-link dropdown-arrow">El desafío</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#portabilidad" class="nav-link dropdown-arrow">Enfoque</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#solucion" class="nav-link dropdown-arrow">Nuestra solución</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimoniales" class="nav-link dropdown-arrow">Testimoniales</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a href="#planes" class="nav-link dropdown-arrow">Planes</a>
+                </li> -->
+                <li class="nav-item">
+                    <a href="#contacto" class="btn__secondary--outline">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
   </div>
-  <div id="page-wrapper">
+  <div id="inicio">
     <section class="hero">
     <span class="hero__overlay"></span>
     <div class="hero__container">
@@ -77,10 +113,10 @@
 </section>
 
   </div>
-  <div id="page-wrapper">
+  <div id="desafio">
     <section class="container-flex">
     <header class="section__header">
-        <div class="section__badge">SECCIÓN A</div>
+        <div class="section__badge">El desafío</div>
         <h1 class="section__title">Diseñado por y para anestesiólogos</h1>
         <p class="section__description">NIVO+ proporciona todas las herramientas necesarias para un registro anestesiológico completo, ágil y legalmente seguro.</p>
     </header>
@@ -136,10 +172,10 @@
     </div>
 </section>
   </div>
-  <div id="page-wrapper">
+  <div id="portabilidad">
     <section class="banner__container">
     <div class="banner__content">
-        <div class="section__badge">SECCIÓN B</div>
+        <div class="section__badge">Portabilidad</div>
         <h2 class="section__title">Diseñado para la realidad del quirófano</h2>
         <p class="section__description">
             Su diseño responsivo, optimizado para dispositivos móviles, permite a los anestesiólogos acceder y registrar información de manera portátil, en cualquier momento y lugar.        </p>
@@ -147,120 +183,132 @@
     </div>
 </section>
   </div>
-  <div id="page-wrapper">
-    <div class="container-grid">
-        <!-- Main Content Section -->
-        <div class="main__content">
-            <div class="section__badge">SECCIÓN C</div>
-            <h1 class="section__title">Solución integral para el registro anestesiológico</h1>
-            <p class="section__description">
-                NIVO+ cubre todo el proceso anestésico, desde la evaluación inicial hasta el alta del paciente
-            </p>
-            
-            <!-- Chart Placeholder -->
-            <img src="./assets/img/nv_screen-03.png" class="process__img">
-            
-            <!-- Pagination Dots -->
-            <nav class="pagination-dots">
-                <div class="dot"></div>
-                <div class="dot active"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </nav>
+  <div id="solucion">
+    <div id="" class="container-grid">
+    <!-- Main Content Section -->
+    <div class="main__content">
+        <div class="section__badge">La Solución</div>
+        <h1 class="section__title">Evaluación Pre anestésica</h1>
+        <p class="section__description">
+            NIVO+ cubre todo el proceso anestésico, desde la evaluación inicial hasta el alta del paciente.
+        </p>
+        
+        <div class="slider-container">
+            <img class="image-slide active" src="./../assets/img/nv_screen-01.jpg" alt="Evaluación Pre anestésica">
+            <img class="image-slide" src="./../assets/img/nv_screen-02.png" alt="Protocolo anestésico">
+            <img class="image-slide" src="./../assets/img/nv_screen-03.jpg" alt="Recuperación postanestésica">
+                <i class="carousel-nav prev fa fa-chevron-left" onclick="changeSlide(-1)"></i>
+                <i class="carousel-nav next fa fa-chevron-right" onclick="changeSlide(1)"></i>
         </div>
-
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <h2 class="sidebar__title">Proceso</h2>
-
-            <!-- Steps List -->
-            <section class="sidebar__stepper">
-                <div class="sidebar__step">
-                    <div class="step__bullet active">✓</div>
-                    <div class="step-content">
-                        <div class="step__prefix">PASO 1</div>
-                        <div class="step__title">Evaluación Pre anestésica</div>
-                        <p class="step__description">Registro de antecedentes alérgicos, clínicos y quirúrgicos, examen físico, de vía aérea y evaluación de riesgo.</p>
-                    </div>
-                </div>
-                <div class="sidebar__step">
-                    <div class="step__bullet">✓</div>
-                    <div class="step-content">
-                        <div class="step__prefix">PASO 2</div>
-                        <div class="step__title">Protocolo anestésico</div>
-                        <p class="step__description">Documentación de condiciones de ingreso, monitoreo utilizado, técnicas anestésicas e invasivas, ventilación, fármacos y condiciones de egreso.</p>
-                    </div>
-                </div>
-                <div class="sidebar__step">
-                    <div class="step__bullet">✓</div>
-                    <div class="step-content">
-                        <div class="step__prefix">PASO 3</div>
-                        <div class="step__title">Recuperación postanestésica</div>
-                        <p class="step__description">Registro de signos vitales en recuperación, evaluación del dolor, complicaciones y condiciones de egreso del paciente.</p>
-                    </div>
-                </div>
-                <div class="sidebar__step">
-                    <div class="step__bullet">✓</div>
-                    <div class="step-content">
-                        <div class="step__prefix">ADICIONALES</div>
-                        <div class="step__title">Medicación e informes</div>
-                        <p class="step__description">Registro de medicación sistémica antálgica y generación de informes de ecografía transesofágica con datos cardiovasculares clave.</p>
-                    </div>
-                </div>
-                <button class="btn__primary ">Solicitar demo</button>
-            </section>
-        </aside>
+        
+        <!-- Navigation Dots -->
+        <div class="fake-radio">
+            <label class="radio-btn active" onclick="goToSlide(0)"></label>
+            <label class="radio-btn" onclick="goToSlide(1)"></label>
+            <label class="radio-btn" onclick="goToSlide(2)"></label>
+        </div>
     </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <header class="sidebar__header">
+            <h2 class="sidebar__title">Solución integral</h2>
+        </header>
+        <section class="sidebar__stepper">
+            <div class="sidebar__step active" onclick="goToSlide(0)">
+                <div class="step__bullet active">✓</div>
+                <div class="step-content">
+                    <div class="step__prefix">PASO 1</div>
+                    <div class="step__title">Evaluación Pre anestésica</div>
+                    <p class="step__description">Registro de antecedentes alérgicos, clínicos y quirúrgicos, examen físico, de vía aérea y evaluación de riesgo.</p>
+                </div>
+            </div>
+            
+            <div class="sidebar__step" onclick="goToSlide(1)">
+                <div class="step__bullet">✓</div>
+                <div class="step-content">
+                    <div class="step__prefix">PASO 2</div>
+                    <div class="step__title">Protocolo anestésico</div>
+                    <p class="step__description">Documentación de condiciones de ingreso, monitoreo utilizado, técnicas anestésicas e invasivas, ventilación, fármacos y condiciones de egreso.</p>
+                </div>
+            </div>
+            
+            <div class="sidebar__step" onclick="goToSlide(2)">
+                <div class="step__bullet">✓</div>
+                <div class="step-content">
+                    <div class="step__prefix">PASO 3</div>
+                    <div class="step__title">Recuperación postanestésica</div>
+                    <p class="step__description">Registro de signos vitales en recuperación, evaluación del dolor, complicaciones y condiciones de egreso del paciente.</p>
+                </div>
+            </div>
+            
+            <div class="sidebar__step" onclick="goToSlide(3)">
+                <div class="step__bullet">✓</div>
+                <div class="step-content">
+                    <div class="step__prefix">ADICIONALES</div>
+                    <div class="step__title">Medicación e informes</div>
+                    <p class="step__description">Registro de medicación sistémica antálgica y generación de informes de ecografía transesofágica con datos cardiovasculares clave.</p>
+                </div>
+            </div>
+        </section>
+        <!-- <button class="btn__primary">Solicitar demo</button> -->
+    </aside>
+</div>
   </div>
-  <div id="page-wrapper">
+  <div id="testimoniales">
       <!-- Testimonials Section -->
     <section class="container-flex gradient-light">
         <header class="section__header">
             <div class="section__badge">Testimoniales</div>
             <h1 class="section__title">Qué dicen nuestros usuarios</h1>
             <p class="section__description">Mira lo que nuestros clientes dicen sobre cómo NIVO+ ha transformado su flujo de trabajo.</p>
-        </header>
-                
-        <div class="wrapper__card--row">
-            <div class="card--quote">
-                <img src="https://randomuser.me/api/portraits/men/78.jpg" class="testimonial-avatar">
-                <p class="testimonial-quote">
-                    "NIVO+ ha transformado nuestra práctica anestesiológica. Ahora podemos registrar todos los datos necesarios sin comprometer nuestra atención al paciente. La generación automática de informes nos ahorra horas cada día."
-                </p>
-                <h4 class="testimonial-author">Nombre y Apellido</h4>
-                <p class="testimonial-role">Rol - Institución - Mat.</p>
-            </div>
-            
-            <div class="card--quote active">
-                <img src="https://randomuser.me/api/portraits/men/78.jpg" class="testimonial-avatar">
-                <p class="testimonial-quote">
-                    "La capacidad de registrar más de 60 datos por hora en tiempo real mientras atiendo al paciente ha sido revolucionaria. Los informes generados cumplen con todos los requisitos legales y son mucho más completos."
-                </p>
-                <h4 class="testimonial-author">Nombre y Apellido</h4>
-                <p class="testimonial-role">Rol - Institución - Mat.</p>
-            </div>
-            
-            <div class="card--quote">
-                <img src="https://randomuser.me/api/portraits/men/78.jpg" class="testimonial-avatar">
-                <p class="testimonial-quote">
-                    "La interfaz móvil de NIVO+ me permite alternar entre dispositivos sin perder información. Los discursos automáticos para técnicas anestésicas han reducido nuestro tiempo de documentación en un 40%."
-                </p>
-                <h4 class="testimonial-author">Nombre y Apellido</h4>
-                <p class="testimonial-role">Rol - Institución - Mat.</p>
+        </header>   
+
+        <!-- mini-cards  -->
+        <button class="carousel-nav prev fa fa-chevron-left" onclick="moveCarousel(-1)"></button>
+        <div class="carousel">
+            <div class="carousel-wrapper" id="carouselWrapper">
+                <!-- Card 1 -->
+                <div class="card--quote">
+                    <img src="https://randomuser.me/api/portraits/men/78.jpg" class="testimonial-avatar">
+                    <p class="testimonial-quote">
+                        "NIVO+ ha transformado nuestra práctica anestesiológica. Ahora podemos registrar todos los datos necesarios sin comprometer nuestra atención al paciente. La generación automática de informes nos ahorra horas cada día."
+                    </p>
+                    <h4 class="testimonial-author">Nombre y Apellido</h4>
+                    <p class="testimonial-role">Rol - Institución - Mat.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card--quote active">
+                    <img src="https://randomuser.me/api/portraits/men/78.jpg" class="testimonial-avatar">
+                    <p class="testimonial-quote">
+                        "La capacidad de registrar más de 60 datos por hora en tiempo real mientras atiendo al paciente ha sido revolucionaria. Los informes generados cumplen con todos los requisitos legales y son mucho más completos."
+                    </p>
+                    <h4 class="testimonial-author">Nombre y Apellido</h4>
+                    <p class="testimonial-role">Rol - Institución - Mat.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card--quote">
+                    <img src="https://randomuser.me/api/portraits/men/78.jpg" class="testimonial-avatar">
+                    <p class="testimonial-quote">
+                        "La interfaz móvil de NIVO+ me permite alternar entre dispositivos sin perder información. Los discursos automáticos para técnicas anestésicas han reducido nuestro tiempo de documentación en un 40%."
+                    </p>
+                    <h4 class="testimonial-author">Nombre y Apellido</h4>
+                    <p class="testimonial-role">Rol - Institución - Mat.</p>
+                </div>
             </div>
         </div>
-            
-        <div class="testimonials-dots">
-            <div class="dot"></div>
-            <div class="dot active"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+        <button class="carousel-nav next fa fa-chevron-right" onclick="moveCarousel(1)"></button>
+
+        <div class="testimonials-dots" id="dotsContainer">
+            <span class="dot" onclick="goToCard(0)"></span>
+            <span class="dot active" onclick="goToCard(1)"></span>
+            <span class="dot" onclick="goToCard(2)"></span>
         </div>
     </section>
   </div>
-  <div id="page-wrapper">
+  <div id="contacto">
     <footer class="container-flex">
     <img src="./assets/img/nv_logo-w.png" alt="" width="75" height="66">
     <header class="section__header">
@@ -276,6 +324,9 @@
     <div class="social__links">
         <a href="#" class="social-link linkedin" aria-label="LinkedIn"></a>
     </div>
+    <script type="text/javascript" src="./assets/js/header.js" defer></script>
+    <script type="text/javascript" src="./assets/js/carousel.js" defer></script>
+    <script type="text/javascript" src="./assets/js/slider.js" defer></script>
 </footer>
 <div class="footer--disclaimer">
        <p><b>© 2025 NIVO+ es una marca registrada.</b> Todos los derechos reservados.</p>
@@ -284,7 +335,6 @@
             <a href="">Términos</a>
             <a href="">Cookies</a>
         </nav>
-
 </div>
   </div>
 </body>
