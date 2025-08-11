@@ -5,7 +5,7 @@
 
     --bodyPadding: 96px;
     --bodyGap: 48px;
-    --panelPadding: 48px;
+    --panelPadding: 52px;
     --panelGap: 36px;
     --cardPadding: 36px;
     --cardWidth: 320px;
@@ -99,7 +99,7 @@ body {
         cursor: pointer;
     }
 
-    /* Mobile Navigation */
+    
     .mobile-nav-overlay {
         position: fixed;
         top: var(--headerHeight);
@@ -170,7 +170,7 @@ body {
         color: white;
     }
 
-/* Mobile Responsive */
+
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
@@ -185,12 +185,12 @@ body {
     }
 }
 
-/* Smooth scrolling */
+
 html {
     scroll-behavior: smooth;
 }
 
-/* Hero Section */
+
 .hero {
     background: url("./img/nv_desktop.jpg") no-repeat center;
     background-size: cover;
@@ -279,17 +279,13 @@ html {
     @extend %baseBtn;
 
     &:hover {
-        --btnColor: var(--primaryLight);
-
+        --btnColor: var(--primary);
+        color: var(--btnColor);
         transition: all 0.2s;
         background-color: var(--neutralLight);
     }
 }
 
-.contact-btn:hover {
-    color: var(--primary);
-    border: 2px solid var(--primary);
-}
 
 .btn__primary {
     --btnBackgorund: var(--primaryLight);
@@ -350,13 +346,12 @@ html {
     flex-shrink: 0;
 }
 
-/* Content Section */
 .container-flex {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--containerGap);
-    padding: var(--bodyPadding);
+    gap: var(--containerGapRow);
+    padding: var(--panelPadding) var(--bodyPadding);
     width: 100%;
 
     &:not(footer.container-flex) {
@@ -372,7 +367,7 @@ html {
 .section__header {
     display: flex;
     flex-direction: column;
-    gap: var(--containerGap);
+    gap: var(--containerGapRow);
     text-align: center;
 }
 
@@ -440,7 +435,7 @@ html {
             }
 
             &.success {
-                border: solid 4px var(--success);
+                border: solid 4px var(--secondary);
             }
         }
         
@@ -459,7 +454,7 @@ html {
                 }
     
                 &.success {
-                    color: var(--success);
+                    color: var(--secondary);
                 }
             }
     
@@ -506,6 +501,7 @@ html {
     justify-content: space-between;
     overflow-x: hidden;
     position: relative;
+    height: calc(100vh - var(--headerHeight));
 
     .section__badge, .section__title, .section__description {
         color: white;
@@ -684,7 +680,7 @@ html {
     height: 360px;
 
     .banner__content {
-        width: 50%;
+        width: 60%;
         display: flex;
         flex-direction: column;
         gap: var(--containerGap);
@@ -732,15 +728,16 @@ html {
   .container-grid {
         display: flex;
         flex-wrap: wrap;
-        min-height: 100vh;
+        height: 100vh;
+        // height: calc(100vh - var(--headerHeight));
     }
 
     .main__content {
         display: flex;
         flex-direction: column;
-        gap: var(--containerGap);
+        gap: var(--containerGapRow);
         background: white;
-        padding: var(--bodyPadding);
+        padding: 48px var(--bodyPadding);
         flex: 1;
         width: 50%;
         position: relative;
@@ -804,7 +801,7 @@ html {
     }
 
     .sidebar__header {
-        padding: var(--bodyPadding) var(--cardPadding) var(--cardPadding) var(--cardPadding);
+        padding: 36px var(--cardPadding) 12px var(--cardPadding);
 
         .sidebar__title {
             font-size: var(--cardTitleSize);
@@ -843,7 +840,7 @@ html {
     .step__bullet {
         width: 32px;
         height: 32px;
-        display: flex;
+        display: flex!important;
         justify-content: center;
         align-items: center;
         color: white;
@@ -961,7 +958,7 @@ footer {
     font-size: 1rem;
 }
 
-/* Disclaimer */
+
 .footer--disclaimer {
     display: flex;
     justify-content: space-between;
@@ -997,11 +994,11 @@ footer {
     }
 }
 
-/* Desktop - 3 cards visible */
+
 @media (min-width: 769px) {
     .carousel-wrapper {
         justify-content: flex-start;
-        padding-left: calc(50% - 160px); /* Center the active card */
+        padding-left: calc(50% - 160px); 
     }
 }
 
@@ -1023,7 +1020,7 @@ footer {
 
     .carousel-wrapper {
         justify-content: flex-start;
-        padding-left: calc(50% - 100px); /* Center the active card */
+        padding-left: calc(50% - 100px); 
     }
 
     .card--quote {
@@ -1050,6 +1047,7 @@ footer {
     }
         
     .container-grid {
+        height: 100%;
         flex-direction: column;
 
         .step__description {
@@ -1062,6 +1060,7 @@ footer {
         --bodyPadding: 36px;
         
         width: 100%;
+        height: fit-content;
 
         .sidebar__header {
             display: none;
@@ -1083,10 +1082,6 @@ footer {
         .fake-radio {
             display: none;
         }
-    }
-    
-    .sidebar {
-        min-width: auto;
     }
     
     .section__title {
@@ -1171,6 +1166,7 @@ footer {
     // banner
     .banner__container {
         align-items: start!important;
+        height: calc(100vh - var(--headerHeight));
     }
 
     .banner__container, .main__content {
@@ -1185,30 +1181,6 @@ footer {
                 width: 75vw!important;
             }
         }
-    }
-
-
-
-    // testimonials
-    #cards-slider {
-
-        &.mini-cards-wrapper {
-            --containerGap: 16px;
-            gap: var(--containerGap);
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            width: 100vw;
-            box-sizing: border-box;
-            transition: all .5s;
-            padding-left: 1rem;
-
-            .card-slide {
-                display: flex;
-                flex-direction: row;
-            }
-        }   
     }
 
     // footer
@@ -1239,9 +1211,6 @@ footer {
     }
 
 }
-
-
-
     
     //  Mini-slider
     #cards-slider {
@@ -1269,9 +1238,6 @@ footer {
 
 }   
 
-
-    /* Move slides overflowed container */
-
     #card1:checked ~ .mini-cards-wrapper {
         margin-left: 0rem;
     }
@@ -1282,4 +1248,62 @@ footer {
     
     #card3:checked ~ .mini-cards-wrapper {
         margin-left: calc(100vw - 64rem);
+    }
+
+    // Splash
+    .splash {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+    }
+
+    .splash.hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .logo-container {
+        display: flex;
+        flex-direction: column;
+
+        .logo {
+            transform: scale(1.5);
+            opacity: 0;
+            animation: logoFadeIn 2.5s ease-out 1.3s forwards;
+        }
+    
+        .tagline {
+            margin-top: 20px;
+            opacity: 0;
+            animation: taglineFadeIn 2.5s ease-out 1.3s forwards;
+        }
+    }
+
+    .landing {
+        opacity: 0;
+    }
+
+    .landing.visible {
+        opacity: 1;
+    }
+    
+
+    @keyframes logoFadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes taglineFadeIn {
+        to {
+            opacity: 1;
+        }
     }

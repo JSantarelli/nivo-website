@@ -5,7 +5,7 @@
     <title>NIVO+ | Healthcare Anestesic System</title>
        <title> – Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</title>
 
-    <link href="/images/nivo.ico" rel='shortcut icon' type='image/x-icon'>
+    <link href="/assets/img/nv_favicon.ico" rel='shortcut icon' type='image/x-icon'>
 
     <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -27,12 +27,18 @@
     <meta itemprop="name" content="NIVO+ | Healthcare systems">
     <meta itemprop="description" content="Sitio oficial de NIVO+ Healthcare systems">
 </head>
+<body>
+  <span id="splashScreen" class="splash">
+      <div class="logo-container">
+          <img class="logo" src="./assets/img/nv_logo.svg"/>
+          <img class="tagline" src="./assets/img/nv_logo-tag.svg"/>
+      </div>
+  </span>
 
-<body class="landing">
-
-  <!-- Page Wrapper -->
-  <div id="page-wrapper">
-    <!-- Navigation -->
+  <section id="mainContent" class="landing">
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+      <!-- Navigation -->
     <nav class="navbar">
         <img src="./assets/img/nv_logo-h.png" alt="Logo" width="160">
         <ul class="nav-menu">
@@ -90,9 +96,9 @@
         </div>
     </div>
 
-  </div>
-  <div id="inicio">
-    <section class="hero">
+    </div>
+    <div id="inicio">
+      <section class="hero">
     <span class="hero__overlay"></span>
     <div class="hero__container">
         <h1 class="hero__title">Registro anestesiológico digital completo</h1>
@@ -109,9 +115,9 @@
     </div>
 </section>
 
-  </div>
-  <div id="desafio">
-    <section class="container-flex">
+    </div>
+    <div id="desafio">
+      <section class="container-flex">
     <header class="section__header">
         <div class="section__badge">El desafío</div>
         <h1 class="section__title">Diseñado por y para anestesiólogos</h1>
@@ -168,20 +174,20 @@
         </div>
     </div>
 </section>
-  </div>
-  <div id="portabilidad">
-    <section class="banner__container">
+    </div>
+    <div id="portabilidad">
+      <section class="banner__container">
     <div class="banner__content">
         <div class="section__badge">Portabilidad</div>
         <h2 class="section__title">Diseñado para la realidad del quirófano</h2>
         <p class="section__description">
-            Su diseño responsivo, optimizado para dispositivos móviles, permite a los anestesiólogos acceder y registrar información de manera portátil, en cualquier momento y lugar.        </p>
+            Su diseño optimizado para dispositivos móviles, permite a los anestesiólogos acceder y registrar información de manera fluida, en cualquier momento y lugar.</p>
         <img src="./assets/img/nv_mobile.png" alt="" class="banner__img">
     </div>
 </section>
-  </div>
-  <div id="solucion">
-    <div id="" class="container-grid">
+    </div>
+    <div id="solucion">
+      <div id="" class="container-grid">
     <!-- Main Content Section -->
     <div class="main__content">
         <div class="section__badge">La Solución</div>
@@ -191,9 +197,9 @@
         </p>
         
         <div class="slider-container">
-            <img class="image-slide active" src="./../assets/img/nv_screen-01.jpg" alt="Evaluación Pre anestésica">
-            <img class="image-slide" src="./../assets/img/nv_screen-02.png" alt="Protocolo anestésico">
-            <img class="image-slide" src="./../assets/img/nv_screen-03.jpg" alt="Recuperación postanestésica">
+            <img class="image-slide active" src="./assets/img/nv_screen-01.jpg" alt="Evaluación Pre anestésica">
+            <img class="image-slide" src="./assets/img/nv_screen-02.png" alt="Protocolo anestésico">
+            <img class="image-slide" src="./assets/img/nv_screen-03.jpg" alt="Recuperación postanestésica">
                 <i class="carousel-nav prev fa fa-chevron-left" onclick="changeSlide(-1)"></i>
                 <i class="carousel-nav next fa fa-chevron-right" onclick="changeSlide(1)"></i>
         </div>
@@ -213,7 +219,7 @@
         </header>
         <section class="sidebar__stepper">
             <div class="sidebar__step active" onclick="goToSlide(0)">
-                <div class="step__bullet active">✓</div>
+                <div class="step__bullet fa fa-check"></div>
                 <div class="step-content">
                     <div class="step__prefix">PASO 1</div>
                     <div class="step__title">Evaluación Pre anestésica</div>
@@ -222,7 +228,7 @@
             </div>
             
             <div class="sidebar__step" onclick="goToSlide(1)">
-                <div class="step__bullet">✓</div>
+                <div class="step__bullet fa fa-check"></div>
                 <div class="step-content">
                     <div class="step__prefix">PASO 2</div>
                     <div class="step__title">Protocolo anestésico</div>
@@ -231,7 +237,7 @@
             </div>
             
             <div class="sidebar__step" onclick="goToSlide(2)">
-                <div class="step__bullet">✓</div>
+                <div class="step__bullet fa fa-check"></div>
                 <div class="step-content">
                     <div class="step__prefix">PASO 3</div>
                     <div class="step__title">Recuperación postanestésica</div>
@@ -240,7 +246,7 @@
             </div>
             
             <div class="sidebar__step" onclick="goToSlide(3)">
-                <div class="step__bullet">✓</div>
+                <div class="step__bullet fa fa-plus"></div>
                 <div class="step-content">
                     <div class="step__prefix">ADICIONALES</div>
                     <div class="step__title">Medicación e informes</div>
@@ -251,9 +257,9 @@
         <!-- <button class="btn__primary">Solicitar demo</button> -->
     </aside>
 </div>
-  </div>
-  <div id="testimoniales">
-      <!-- Testimonials Section -->
+    </div>
+    <div id="testimoniales">
+        <!-- Testimonials Section -->
     <section class="container-flex gradient-light">
         <header class="section__header">
             <div class="section__badge">Testimoniales</div>
@@ -304,9 +310,9 @@
             <span class="dot" onclick="goToCard(2)"></span>
         </div>
     </section>
-  </div>
-  <div id="contacto">
-    <footer class="container-flex">
+    </div>
+    <div id="contacto">
+      <footer class="container-flex">
     <img src="./assets/img/nv_logo-w.png" alt="" width="75" height="66">
     <header class="section__header">
         <h2 class="section__title">Contacto y redes</h2>
@@ -321,6 +327,7 @@
     <div class="social__links">
         <a href="#" class="social-link linkedin" aria-label="LinkedIn"></a>
     </div>
+    <script type="text/javascript" src="./assets/js/splash.js" defer></script>
     <script type="text/javascript" src="./assets/js/header.js" defer></script>
     <script type="text/javascript" src="./assets/js/carousel.js" defer></script>
     <script type="text/javascript" src="./assets/js/slider.js" defer></script>
@@ -333,7 +340,8 @@
             <a href="">Cookies</a>
         </nav>
 </div>
-  </div>
+    </div>
+  </section>
 </body>
 
 </html>
