@@ -171,21 +171,6 @@ body {
     }
 
 
-@media (max-width: 768px) {
-    .nav-menu {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .navbar {
-        padding: 0 16px;
-    }
-}
-
-
 html {
     scroll-behavior: smooth;
 }
@@ -532,6 +517,7 @@ html {
     cursor: grab;
     gap: 20px;
     padding: 20px 0;
+    touch-action: manipulation;
 }
 
 .carousel-wrapper:active {
@@ -606,7 +592,6 @@ html {
 .testimonial-role {
     font-size: 12px;
     color: var(--neutral);
-    font-optical-sizing: 12px;
 }
 
 .testimonials-dots {
@@ -662,11 +647,6 @@ html {
 
 .carousel-nav.next {
     right: -15px;
-}
-
-.carousel-wrapper {
-    touch-action: pan-x;
-    -webkit-overflow-scrolling: touch;
 }
 
 // Banner
@@ -896,8 +876,8 @@ html {
     }
 
     @keyframes fading {
-        0% { opacity: 0; transform: translateX(20px); }
-        100% { opacity: 1; transform: translateX(0); }
+        0% { opacity: 0; }
+        100% { opacity: 1 }
     }
 
 
@@ -1004,6 +984,30 @@ footer {
 
 // Mobile
 @media (max-width: 768px) {
+
+    .logo-container {
+        gap: var(--containerGapRow)!important;
+
+        .logo {
+            transform: scale(1.5)!important;
+        }
+        
+        .tagline {
+            transform: scale(1)!important;
+        }
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        padding: 0 16px;
+    }
 
     nav.navbar {
         --bodyPadding: 36px;
@@ -1273,15 +1277,16 @@ footer {
     .logo-container {
         display: flex;
         flex-direction: column;
+        gap: var(--containerGap);
 
         .logo {
-            transform: scale(1.5);
+            transform: scale(1.7);
             opacity: 0;
             animation: logoFadeIn 2.5s ease-out 1.3s forwards;
         }
     
         .tagline {
-            margin-top: 20px;
+            transform: scale(1.2);
             opacity: 0;
             animation: taglineFadeIn 2.5s ease-out 1.3s forwards;
         }
@@ -1292,6 +1297,7 @@ footer {
     }
 
     .landing.visible {
+        animation: fading 800ms ease-in;
         opacity: 1;
     }
     

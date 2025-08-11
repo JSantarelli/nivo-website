@@ -27,7 +27,6 @@
             document.getElementById('splashScreen').classList.add('hidden');
             setTimeout(() => {
                 document.body.style.overflow = 'auto';
-                document.body.style.display = 'flex';
-                document.getElementById('mainContent').classList.add('fading');
+                document.getElementById('mainContent').classList.add('visible');
             }, 800);
         });
