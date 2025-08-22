@@ -300,6 +300,30 @@ html {
     }
 }
 
+.btn__tertiary {
+    --btnBackgorund: transparent;
+    --btnColor: var(--primaryLight);
+    --btnFontSize: var(--descriptionSize);
+
+    @extend %baseBtn;
+    border: none!important;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-transform: lowercase!important;
+    
+    &:hover {
+        --btnColor: var(--secondary);
+    }
+
+}
+
+.section__description {
+    a {
+        display: contents!important;
+    }
+}
+
 .hero__note {
     display: flex;
     justify-content: center;

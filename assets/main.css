@@ -233,7 +233,7 @@ html {
   flex: 1;
 }
 
-.btn__secondary, .btn__primary, .btn__secondary--outline {
+.btn__tertiary, .btn__secondary, .btn__primary, .btn__secondary--outline {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -282,6 +282,24 @@ html {
 }
 .btn__secondary:hover {
   background-color: rgba(255, 255, 255, 0.25);
+}
+
+.btn__tertiary {
+  --btnBackgorund: transparent;
+  --btnColor: var(--primaryLight);
+  --btnFontSize: var(--descriptionSize);
+  border: none !important;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-transform: lowercase !important;
+}
+.btn__tertiary:hover {
+  --btnColor: var(--secondary);
+}
+
+.section__description a {
+  display: contents !important;
 }
 
 .hero__note {
