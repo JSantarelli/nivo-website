@@ -1,7 +1,7 @@
  let currentCard = 1; // Start with second card active
         const totalCards = 3;
         const wrapper = document.getElementById('carouselWrapper');
-        const dots = document.querySelectorAll('.bullet');
+        const dots = document.querySelectorAll('.dot');
         const cards = document.querySelectorAll('.card--quote');
 
         // Touch/scroll handling
@@ -135,13 +135,7 @@
             updateCarousel();
         }
 
-        // Auto-play functionality removed
-
-        // Pause auto-play on hover (removed)
-        // wrapper.addEventListener('mouseenter', stopAutoPlay);
-        // wrapper.addEventListener('mouseleave', startAutoPlay);
-
-        // Handle window resize
+        // Resize
         window.addEventListener('resize', () => {
             updateCarousel();
         });
