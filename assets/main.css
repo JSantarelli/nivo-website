@@ -785,6 +785,9 @@ html {
 .sidebar__step:last-child {
   border-bottom: none !important;
 }
+.sidebar__step .step__description {
+  display: none;
+}
 
 .sidebar__step:hover, .sidebar__step.active {
   background-color: var(--success);
@@ -837,12 +840,6 @@ html {
 
 .sidebar__step.active .step__title {
   color: var(--primary);
-}
-
-.step__description {
-  font-size: 12px;
-  color: var(--neutral);
-  line-height: 1.4;
 }
 
 .fading {
@@ -1001,9 +998,6 @@ footer.container-flex .section__description {
   .container-grid {
     height: 100%;
     flex-direction: column;
-  }
-  .container-grid .step__description {
-    display: none;
   }
   .main__content,
   .sidebar {
@@ -1169,7 +1163,7 @@ footer.container-flex .section__description {
   transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
 }
 
-.splash.hidden {
+.hidden {
   opacity: 0;
   visibility: hidden;
 }

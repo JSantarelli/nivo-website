@@ -1,9 +1,13 @@
-    let currentSlideIndex = 0;
+let currentSlideIndex = 0;
         const slides = document.querySelectorAll('.image-slide');
         const btns = document.querySelectorAll('.radio-btn');
         const steps = document.querySelectorAll('.sidebar__step');
         const bullets = document.querySelectorAll('.step__bullet');
         const totalSlides = slides.length;
+        
+        // Get references to main content elements
+        const mainTitle = document.getElementById('main-title');
+        const mainDescription = document.getElementById('main-description');
 
         function updateSlider() {
             // Update slides
@@ -29,6 +33,22 @@
             bullets.forEach((bullet, index) => {
                 bullet.classList.toggle('active', index === currentSlideIndex);
             });
+            
+            // Update main content title and description from active step
+            updateMainContent();
+        }
+
+        function updateMainContent() {
+            const activeStep = steps[currentSlideIndex];
+            if (activeStep) {
+                const stepTitle = activeStep.querySelector('.step__title');
+                const stepDescription = activeStep.querySelector('.step__description');
+                
+                if (stepTitle && stepDescription) {
+                    mainTitle.textContent = stepTitle.textContent;
+                    mainDescription.textContent = stepDescription.textContent;
+                }
+            }
         }
 
         function goToSlide(index) {
